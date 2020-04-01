@@ -1,0 +1,8 @@
+printf("     ★★★        ★★★        ★★★\n");
+printf("    ★      ★    ★      ★  ★      ★\n");
+printf("    ★        ★★        ★★        ★\n");
+printf("      ★        一切都会好起来的     ★\n");
+printf("        ★            ★           ★\n");
+printf("          ★        ★ ★        ★\n");
+printf("            ★    ★     ★    ★\n");
+printf("               ★           ★\n");

@@ -1,0 +1,41 @@
+/*
+       编写程序，其功能是：将随机生成的10个3位正整数，再判断该数是升序数还是降底数，并将判断结果显示在屏幕上。升序数是指其各位数字从高位到低位，一个比一个大的整数，如134、257、389等均为升序数；降序数则反之。程序中至少包含一个判断某数是升序还是降序数的通用（函数）过程。
+*/
+#include<stdio.h>
+#include<stdlib.h>
+#include<math.h>
+#include<time.h>
+int puanduan(int n)
+{
+     int  i,k=0,a[5];
+     while(n!=0)
+        {
+             a[k++]=n%10;
+             n=n/10;
+        }
+     for(i=1;i<k-1;i++)
+       { 
+             if(a[i]<a[i-1]&&a[i]>a[i+1])             return  1;
+             else  if(a[i]>a[i-1]&&a[i]<a[i+1])       return -1;
+                   else   return 0;
+       }
+}
+void   main()
+{
+     int  i,k,a[10];
+     randomize();
+     do
+       {
+           scanf("%d",&k);
+       }while(k<2||k>5);
+     for(i=0;i<10;i++)
+         {  
+           a[i]=rand()%((pow(10,k-1)*9))+pow(10,k-1);
+         }
+     for(i=0;i<10;i++)
+         {
+             if(puanduan(a[i])==1)  printf("%d is up",a[i]);
+             else if(puanduan(a[i])==-1)  printf("%d is off",a[i]);
+                  else if(puanduan(a[i])==0)  printf("%d is none",a[i]);
+         }     
+}

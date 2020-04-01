@@ -1,0 +1,40 @@
+/*
+       将若干正整数排成圆圈。编写程序，找出拐点元素（所谓拐点元素是指它比左右相邻元素都大或都小），输出拐点元素的值及位置。程序中应定义一个生成没有重复元素的的两位随机整数数组的
+通用过程。
+*/
+#include<stdio.h>
+#include<stdlib.h>
+void qiuyuansu(int a[])
+{  
+   int i;
+   a[0]=a[20];
+   a[21]=a[1];
+   for(i=1;i<=20;i++)
+     {
+        if(sushu(a[i])&&((a[i]>a[i-1]&&a[i]>a[i+1])||(a[i]<a[i-1]&&a[i]<a[i+1])))     printf("%4d space is %4d\n",a[i],i-1);
+     }
+}
+int sushu(int n)
+{
+     int i;
+     for(i=2;i<=n-1;i++)
+         {
+             if(n%i==0)  return 0;
+         }
+     return 1;
+}
+void main()
+{
+     int a[22],i;
+     randomize();
+     for(i=1;i<=20;i++)
+          a[i]=random(90)+10; 
+     for(i=1;i<=20;i++)
+        {
+          printf("%4d",a[i]);
+          if(i%10==0)   printf("\n");  
+        }  
+     printf("\n");  
+     qiuyuansu(a);
+
+}

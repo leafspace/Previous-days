@@ -1,0 +1,45 @@
+/*
+      编写程序，将给定的二进制整数转换为十六进制整数。程序中应定义一个将二进制数转换为十六进
+制数的通用过程。
+*/
+#include<stdio.h>
+#include<math.h>
+void zh(double n)
+{
+    int a[40],i=0,k,j=0,t;
+    char b[10];
+    while(n!=0)
+        {
+           a[i++]=n%10;
+           n=n/10;
+        }
+    k=i;
+    for(i=0;i<k;i=i+4)
+        b[j++]=a[i]+a[i+1]*2+a[i+2]*4+a[i+3]*8;
+    for(i=0;i<j;i++)
+        {
+           switch(b[i])
+               {
+                    case 0 : case 1 : case 2 : case 3 : case 4 : case 5 : case 6 : case 7 : 
+case 8 : case 9 :       b[i]=b[i]+48; break;
+                    case 10 : case 11 : case 12 : case 13 : case 14 : case 15: 
+                        b[i]=b[i]+55;
+               }
+        }
+    for(i=0;i<j/2;i++)
+        {
+           t=b[i];
+           b[i]=b[j-1-i];
+           a[j-1-i]=t;
+        }
+    for(i=0;i<j;i++)
+        {
+           printf("%c",b[i]);	
+        }
+}
+void main()
+{
+    double n;
+    scanf("%lf",&n);
+    zh(n);
+}

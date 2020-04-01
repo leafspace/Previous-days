@@ -1,0 +1,8 @@
+Before Moving:
+b[0]=496
+b[1]=28
+b[2]=6
+After Moving:
+b[0]=6
+b[1]=496
+b[2]=28

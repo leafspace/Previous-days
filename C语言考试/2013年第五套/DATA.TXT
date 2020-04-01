@@ -1,0 +1,2 @@
+The string t is: 6060DCDC8484AA
+Sum of the digits of each integer is: 12 24 

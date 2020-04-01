@@ -1,0 +1,2 @@
+The string t is: A23L6H23a9
+The different integer and frequency is: [2: 23] [1: 6] [1: 9] 

@@ -1,0 +1,20 @@
+void main()
+{
+  int  x, y;
+  FILE *fpin,*fpout;
+  if((fpin=fopen("input.txt","r"))==NULL)
+     {
+          printf("Input file open error\n");
+          exit(0);
+     }
+  fscanf(fpin,"%d",&x);
+  fclose(fpin);
+  if((fpout=fopen("data.txt","w"))==NULL)
+     {
+          printf("Output file open error\n");
+          exit(0);
+     }
+  fprintf(fpout,"initial is %d\n",x);
+  fprintf(fpout,"palindrome is %d\n",y);
+  fclose(fpout);
+}

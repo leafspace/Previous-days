@@ -1,0 +1,34 @@
+/* Note:Your choice is C IDE */
+/*求cos（X）=pow(-1,n+1)*pow(x,2*(n-1))/[2*(n-1)]!
+  n＝1，2，……（自然数），要求：第n项绝对值小于等于10-6为止。
+*/
+#include "stdio.h"
+#include"math.h"
+double fenzi(x,n)
+{
+	
+	return pow(-1,n+1)*pow(x,2*(n-1));
+	
+}
+double fenmu(n)
+{
+	double s=0.0;
+	int i;
+	for(i=1;i<=2*(n-1);i++)
+	  s=s*i;
+	return s;
+}
+void main()
+{
+  double s=0.0;
+  int n=1;
+  int x;
+  printf("请您输入一个数：\n");
+  scanf("%d",&x);
+  while((fenzi(x,n)/fenmu(n))>pow(10,-6))
+    {
+      s=s+(fenzi(x,n)/fenmu(n));
+      n++;
+    }
+  printf("%lf",s);
+}

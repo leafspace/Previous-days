@@ -1,0 +1,2 @@
+String ABCDEF is changed as FFFFFEDDDCBA
+String 1234 is changed as 444321

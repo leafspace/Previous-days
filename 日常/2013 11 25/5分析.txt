@@ -1,0 +1,19 @@
+/*
+从ch[i]中的第wz个字符开始把scd的字符删掉
+*/
+while(scd--)
+{
+  for(j=wz;j<yscd;j++)
+       ch[j]=ch[j+1];
+  yzcd--;
+}
+/*
+从ch[i]中的第wz个字符开始把之后的元素全部向后移动s1cd个位置
+*/   
+for(j=strlen(ch[i]);j>=wz;j--)
+      ch[j+s1cd]=ch[j];
+/*
+从ch[i]中的第wz个字符开始s1中的元素依次存入
+*/
+for(j=0;j<s1cd;j++)
+    ch[wz+j]=s1[j];

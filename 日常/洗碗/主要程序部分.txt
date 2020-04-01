@@ -1,0 +1,24 @@
+#include "stdio.h"
+#include "string.h"
+#include "stdlib.h"
+#include "time.h"
+main()
+{
+  int i=0,j,cs[10];
+  char mz[10][10]={"孙浩","冒秋伟","汤秀伟","张立飞","殷加辉","秦小琴","陈佳燕","陈鑫娟","何亚文","于志云"};
+  srand((unsigned)time(NULL));
+  printf("本程序用于解决洗碗问题，诸等执行，不得有误！！5次一轮，半月一换搭档，诸位好生配合，培养感情！！形成良好的吃饭气氛！！\n");
+  getch();
+  for(;i<10;i++)
+  {  
+	 j=0;
+     cs[i]=rand()%10;
+     for(;j<i;j++)
+		 if(cs[i]==cs[j])
+			  i--;
+			 
+  }
+  for(i=0;i<5;i++)
+	 printf("第%d组:%s和%s\n",i+1,mz[cs[i*2]],mz[cs[i*2+1]]);
+  getch();
+}

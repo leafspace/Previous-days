@@ -1,0 +1,10 @@
+b[0]= 9 and times[0] =1, the weight sum is 9
+b[1]= 8 and times[1] =2, the weight sum is 16
+b[2]= 7 and times[2] =1, the weight sum is 7
+b[3]= 6 and times[3] =1, the weight sum is 6
+b[4]= 5 and times[4] =4, the weight sum is 20
+b[5]= 4 and times[5] =4, the weight sum is 16
+b[6]= 3 and times[6] =3, the weight sum is 9
+b[7]= 2 and times[7] =2, the weight sum is 4
+b[8]= 1 and times[8] =1, the weight sum is 1
+b[9]= 0 and times[9] =1, the weight sum is 0

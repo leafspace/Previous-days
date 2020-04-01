@@ -1,0 +1,31 @@
+/*
+    编写程序，求出给定正整数的所有质因子，并将该数表示成质因子(质因子均带有指数幂)的乘积。例如：
+342=2^1*3^2*19^1
+            【编程要求】
+　　          1．输入N值，按要求的格式显示结果
+              2．程序中应定义一个求一个正整数的质因子的通用过程。
+*/
+#include<stdio.h>
+int yz(int n,int a[])
+{
+     int i,k=0;
+     for(i=n;i>=2;i++)
+         if(n%i==0&&sushu(i))  a[k++]=i;
+     return k;
+}
+int sushu(int n)
+{
+     int i;
+     for(i=2;i<n;i++)
+         if(n%i==0)   return 0;
+     return 1;
+}
+void main()
+{
+     int a[20],n,ws,i;
+     scanf("%d",&n);
+     ws=yz(n,a);
+     printf("%d的质因子为：",n);
+     for(i=0;i<ws;i++)
+     printf("%4d",a[i]);
+}

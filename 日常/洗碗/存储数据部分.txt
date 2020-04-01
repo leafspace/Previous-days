@@ -1,0 +1,9 @@
+/*写入文件保存*/
+FILE *fp;
+if(fp=fopen("date.txt","wb")==NULL)
+{
+    printf("数据存储错误！！");
+	exit(0);
+}
+for(i=0;i<5;i++)
+   fwrite

@@ -1,0 +1,178 @@
+━━━━━━━━━━━━━━━━
+七、程序填空   共1题 （共计20分）
+━━━━━━━━━━━━━━━━
+
+第1题 （20.0分）
+/*-------------------------------------------------------
+【程序填空】
+---------------------------------------------------------
+功能:十个小孩围成一圈分糖果，老师分给第一个小孩 10 块，第二
+     个小孩 2 块，第三个小孩 8 块，第四个小孩 22 块，第五个
+     小孩16 块，第六个小孩 4块，第七个小孩 10 块，第八个小孩
+     6 块，第九个小孩 14 块，第十个小孩20 块。然后所有的小孩
+     同时将自己手中的糖分一半给左边的小孩；糖块数为奇数的人
+     可向老师要一块。问经过这样几次调整后大家手中的糖的块数
+     都一样？每人各有多少块糖？
+-------------------------------------------------------*/
+
+main()
+{ 
+  int i,count=0,a[11]={0,10,2,8,22,16,4,10,6,14,20} ;
+  while(1)                                 
+  { 
+    for(i=1 ; i<=10 ; i++)
+      a[i-1]=a[i-1]/2+a[i]/2 ;
+    /***********SPACE***********/
+    【?】;
+    for(i=1 ; i<=10 ; i++)
+      /***********SPACE***********/
+      if(【?】) a[i]++ ;                        
+    for(i=1 ; i<10 ; i++)
+      /***********SPACE***********/
+      if(a[i]!=a[i+1]) 【?】;                
+    if(i==10) 
+      break ;
+    else 
+    {
+      a[0]=0 ;
+      count++ ;
+    } 
+  } 
+  printf("count=%d number=%d\n",count,a[1]) ;
+}
+
+
+━━━━━━━━━━━━━━━━
+八、程序改错   共1题 （共计30分）
+━━━━━━━━━━━━━━━━
+
+第1题 （30.0分）
+/*------------------------------------------------------        
+【程序改错】
+--------------------------------------------------------
+下列程序的功能是：将一个形如字符1-字符2的字符串进行扩展，
+例如"a-d"字符串扩展成"abcd","4-9"字符串扩展在"456789"。
+其中字符1、字符2必须形式统一（同为大写字母、同为小写字母、
+同为数字字符，且满足字符1<字符2，否则不予扩展）。
+例如，字符串"asg-l3-7$WX-ZA-9=2-7r-w"进行扩展后
+为"asghijkl34567$WZYZA-9=234567rstuvw"。
+下列给定的程序存在错误，请改正。
+------------------------------------------------------*/
+#include "stdio.h"
+#include<string.h>
+int judge(char p,char n)
+{
+   if(p>='0'&& p<n &&n<='9')  return 1;
+   if(p>='a'&& p<n &&n <='z')  return 1;
+   if(p>='A'&& p<n &&n <='Z')  return 1;  
+   return 0; 
+}
+void expend(char str[],int pos,int len)
+{
+        char t[200],c;
+        int i,j;
+        for(i=0;i<pos;i++)
+          t[i]=str[i];
+        /**********FOUND**********/
+    c=str[pos];
+    for(;i<pos+len;i++)
+      t[i]=++c;
+    for(j=pos+1;str[j]!=0;i++,j++)
+      t[i]=str[j];
+    t[i]=0;
+    /**********FOUND**********/
+    strcpy(t,str);
+}
+
+void main()
+{
+char str[200]="asg-l3-7$WX-ZA-9=2-7r-w";
+   int i=1,n;
+   while(str[i]!=0)
+   {
+      /**********FOUND**********/
+      if(str[i]=='-'||judge(str[i-1],str[i+1]))
+      {
+         n=str[i+1]-str[i-1]-1;
+         expend(str,i,n);
+         i=i+n-1;        
+      }
+      i++;
+   }
+   printf("%s\n",str);
+}
+
+
+━━━━━━━━━━━━━━━━
+九、程序设计   共1题 （共计30分）
+━━━━━━━━━━━━━━━━
+
+第1题 （30.0分）
+/*-------------------------------------------------------
+【程序设计】
+---------------------------------------------------------
+程序功能：在去除字符串非字母字符，并忽略字母大小写的情况下，
+判断所给字符串是否为回文。程序中允许使用系统提供的字符串处理函数。
+编写程序：
+1．        编写void movechar(chat str[])函数，去除str中的非字母字符。
+2．        编写void ishw(char str[][100],int n) 函数，判断str中n个字符
+串是否为回文，如是则在字符串前部加上字符串"is:"，否则加上"no:"。 
+-------------------------------------------------------*/
+答案：存在data.txt文件，且文件内容为：
+is:SxPfygaagyFPxS
+no:RdafGKInKcekeKnlKGfadR
+no:xbifXyHVRqqTLLTqRVHyXfibx
+is:evEeRzzReEve
+no:vbeThisUUVqqRTTRppVUUsihTebv
+no:hxrskGjLKGGkLjGkrOxh
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include <string.h>
+void movechar(char str[])
+{
+  /**********Program**********/
+  
+  
+  
+  
+  
+  
+  /**********  End  **********/
+}
+void ishw(char str[][100],int n)
+{
+  /**********Program**********/
+  
+  
+  
+  
+  
+  
+  /**********  End  **********/
+}
+void main()
+{  char str[6][100]={ {"Sx,Pfyga:agyFPxS!"},
+                      {"Rdaf GKI n! Kcek'e:KnlKGfadR"},
+                      {"xbifXyHVRqq10TLL98TqRVHyXfibx"},
+                      {"10evEeRz454zReEve01"},
+                      {"vbe,This UUVqqRTTRppVUU,sihTebv"},
+                      {"hx()r;skGj: LKGGkL!jGkrOxh"}
+                    };
+   int i;
+   FILE *fp;
+   ishw(str,6);
+   if((fp=fopen("DATA.TXT","w"))==NULL)
+   { printf("File open error\n");
+     exit(0);
+   }
+   for(i=0;i<6;i++)
+   {   printf("%s\n",str[i]);
+       fprintf(fp,"%s\n",str[i]);
+   }
+   fclose(fp);
+}
+
+

@@ -1,0 +1,2 @@
+initial is 87
+palindrome is 4884

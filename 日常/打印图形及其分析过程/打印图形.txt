@@ -1,0 +1,28 @@
+/*
+3、	对称图形。从键盘上输入一个3<=n<=15的奇数，在屏幕上输出对称的棱形。
+如:N输入7,则打印如下图形
+                                    A
+                                   BAB
+                                  CBABC
+                                 DCBABCD
+                                  CBABC
+                                   BAB
+                                    A
+
+*/
+#include "stdio.h"
+#include "math.h"
+main()
+{
+    int n,i,j;
+	printf("请您输入一个3-15的奇数：\n");
+	scanf("%d",&n);
+    for(i=-n;i<=n;i++)
+	{
+	    for(j=1;j<=abs(i);j++)
+			printf(" ");
+		for(j=abs(i)-n;j<=abs(abs(i)-n);j++)
+			printf("%c",65+abs(j));
+	    printf("\n");
+     }
+}
